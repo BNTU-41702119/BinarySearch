@@ -39,12 +39,16 @@ int main()
 		numbers[index] = index + 1;
 		cout << numbers[index] << " | ";
 	}
+	
+	cout << endl << "Enter starting search index: ";
+	int from = 0;
+	cin >> from;
 
 	cout << endl << "Enter number: ";
 	int key = 0;
 	cin >> key;
 
-	int index = searchBinary(numbers, 0, SIZE, key);
+	int index = searchBinary(numbers, from, SIZE, key);
 
 	if (index >= 0)
 	{
